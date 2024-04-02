@@ -22,5 +22,5 @@ public class Document {
     private String docId;
     private String docName;
     private String uploadDate;
-    private String doctype;
+    private String docType;
 }

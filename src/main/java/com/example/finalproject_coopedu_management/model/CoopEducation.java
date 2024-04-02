@@ -21,6 +21,7 @@ public class CoopEducation {
 
     @Id
     private String coopId;
+    private String coopName;
     private Date startDate;
     private Date returnDate;
     private String status;
@@ -29,7 +30,6 @@ public class CoopEducation {
     private String coopTerm;
 //    private String fileRequestting;
 //    private String fileReferral;
-    private String fileName;
     private String fileResume;
 
 }
