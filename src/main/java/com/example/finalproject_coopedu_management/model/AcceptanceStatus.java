@@ -6,21 +6,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
-@Table(name = "documents")
+@Table(name = "acceptance_status")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Document {
+public class AcceptanceStatus {
 
     @Id
-    private String docId;
-    private String docName;
-    private Date uploadDate;
-    private String docType;
+    private String acceptStatId;
+    private String status;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "coopEduId")
+    private CoopEducation coopEducation;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "studentId")

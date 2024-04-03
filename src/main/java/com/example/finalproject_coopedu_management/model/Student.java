@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "students")
@@ -19,8 +17,9 @@ public class Student {
 
     @Id
     private String studentId;
-    private String StudentName;
+    private String studentName;
     private String studentLastname;
-    private String studentPhoneNO;
+    private String studentPhoneNo;
     private String studentEmail;
+
 }

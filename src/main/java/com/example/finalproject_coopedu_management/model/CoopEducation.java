@@ -5,14 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
-@Table(name = "coopEducations")
+@Table(name = "coop_educations")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,16 +18,16 @@ import java.util.Date;
 public class CoopEducation {
 
     @Id
-    private String coopId;
-    private String coopName;
+    private String coopEduId;
     private Date startDate;
-    private Date returnDate;
+    private Date endDate;
+    private String coopEduType;
     private String status;
-    private String kindofworkName;
-    private String coopYear;
-    private String coopTerm;
-//    private String fileRequestting;
-//    private String fileReferral;
-    private String fileResume;
+    private String coopEduYear;
+    private String coopEduSemester;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "companyId")
+    private Company company;
 
 }

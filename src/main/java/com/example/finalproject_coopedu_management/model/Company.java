@@ -21,10 +21,11 @@ public class Company {
     private String companyId;
     private String companyName;
     private String companyAddress;
-    private String companyPhoneNO;
+    private String companyPhoneNo;
     private String companyEmail;
     private String companyLine;
     private String companyFacebook;
-    private String coordinator;
-    private String coordinatorphoneNo;
+    private String coordinatorName;
+    private String coordinatorPhoneNo;
+
 }

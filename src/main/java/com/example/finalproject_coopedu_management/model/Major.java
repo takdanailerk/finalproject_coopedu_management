@@ -23,4 +23,5 @@ public class Major {
     private String majorPhoneNo;
     private String majorFax;
     private String majorEmail;
+
 }
