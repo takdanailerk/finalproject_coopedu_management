@@ -30,4 +30,8 @@ public class CoopEducation {
     @JoinColumn(name = "companyId")
     private Company company;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "majorId")
+    private Major major;
+
 }
