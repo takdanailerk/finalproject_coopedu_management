@@ -41,7 +41,7 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
         studentService.addStudent(student);
 
         Company company = new Company(
-                "CPN002",
+                "CPN002", //ทำให้เป็นการเพิ่มเลขแบบ auto เช่น CPN003, CPN004
                 json.get("companyName"),
                 json.get("companyAddress"),
                 json.get("companyPhoneNo"),
@@ -60,7 +60,7 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
         LocalDate endDate = LocalDate.parse(json.get("endDate"), formatter);
 
         CoopEducation coopEducation = new CoopEducation(
-                "COT002",
+                "COT002", //ทำให้เป็นการเพิ่มเลขแบบ auto เช่น COT003, COT004
                 startDate,
                 endDate,
                 json.get("coopEduType"),
