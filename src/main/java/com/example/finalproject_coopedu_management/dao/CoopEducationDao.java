@@ -1,9 +1,8 @@
-package com.example.finalproject_coopedu_management.service;
+package com.example.finalproject_coopedu_management.dao;
 
 import com.example.finalproject_coopedu_management.model.CoopEducation;
 
-
-public interface CoopEducationService {
+public interface CoopEducationDao {
 
     void addCoopEducation (CoopEducation coopEducation);
 

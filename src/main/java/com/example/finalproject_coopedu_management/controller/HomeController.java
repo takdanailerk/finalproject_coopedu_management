@@ -1,18 +1,13 @@
 package com.example.finalproject_coopedu_management.controller;
 
-import com.example.finalproject_coopedu_management.service.CoopEducationService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @Controller
 public class HomeController {
 
-    @Autowired
-    private CoopEducationService coopEducationService;
+//    @Autowired
+//    private CoopEducationService coopEducationService;
 
     @RequestMapping("/")
     public String goToHomePage () {
@@ -30,11 +25,11 @@ public class HomeController {
         return "request-form";
     }
 
-    @PostMapping(value = "/request-form-submit")
-    public String requestFormSubmit (@RequestParam Map<String, String> json) {
-        coopEducationService.addCoopRequestForm(json);
-        return "request-form";
-    }
+//    @PostMapping(value = "/request-form-submit")
+//    public String requestFormSubmit (@RequestParam Map<String, String> json) {
+//        coopEducationService.addCoopRequestForm(json);
+//        return "request-form";
+//    }
 
     @GetMapping("/referral-form")
     public String goToReferralFormPage () {

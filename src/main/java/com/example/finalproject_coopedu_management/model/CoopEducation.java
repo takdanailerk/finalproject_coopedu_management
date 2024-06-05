@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -19,19 +20,21 @@ public class CoopEducation {
 
     @Id
     private String coopEduId;
-    private Date startDate;
-    private Date endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private String coopEduType;
-    private String status;
+//    private String status;
     private String coopEduYear;
     private String coopEduSemester;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "companyId")
-    private Company company;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "majorId")
-    private Major major;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "companyId")
+//    private Company company;
+//
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "majorId")
+//    private Major major;
+
 
 }
