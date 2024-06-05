@@ -16,7 +16,9 @@ import javax.persistence.*;
 public class AcceptanceStatus {
 
     @Id
-    private String acceptStatId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long acceptStatId;
+
     private String status;
 
     @ManyToOne(cascade = CascadeType.ALL)

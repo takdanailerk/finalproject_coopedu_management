@@ -196,10 +196,10 @@
             <div class="col-sm-3">
                 <input type="email" name="studentEmail" required class="form-control"  placeholder="email">
             </div>
-<%--&lt;%&ndash;            <div class="col-sm-2 control-label">อัปโหลด cv/transcript :</div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;            <div class="col-sm-3">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                <input type="file" id="pdf" name="rsm_pdf" required accept=".pdf">&ndash;%&gt;--%>
-<%--&lt;%&ndash;            </div>&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;            <div class="col-sm-2 control-label">อัปโหลด cv/transcript :</div>&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;            <div class="col-sm-3">&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;                <input type="file" id="pdf" name="rsm_pdf" required accept=".pdf">&ndash;%&gt;&ndash;%&gt;--%>
+<%--&lt;%&ndash;&lt;%&ndash;            </div>&ndash;%&gt;&ndash;%&gt;--%>
         </div>
 
         <div class="form-group row mb-3">

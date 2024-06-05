@@ -7,6 +7,8 @@ import com.example.finalproject_coopedu_management.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +32,7 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
 
     @Override
     @Transactional
-    public void addCoopRequestForm(Map<String, String> json) {
+    public void addCoopRequestForm(@RequestBody Map<String, String> json) {
         Student student = new Student(
                 json.get("studentId"),
                 json.get("studentName"),
@@ -41,7 +43,7 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
         studentService.addStudent(student);
 
         Company company = new Company(
-                "CPN002", //ทำให้เป็นการเพิ่มเลขแบบ auto เช่น CPN003
+                null,//ทำให้เป็นการเพิ่มเลขแบบ auto เช่น CPN003
                 json.get("companyName"),
                 json.get("companyAddress"),
                 json.get("companyPhoneNo"),
@@ -60,7 +62,7 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
         LocalDate endDate = LocalDate.parse(json.get("endDate"), formatter);
 
         CoopEducation coopEducation = new CoopEducation(
-                "COT002", //ทำให้เป็นการเพิ่มเลขแบบ auto เช่น COT003
+                null,//ทำให้เป็นการเพิ่มเลขแบบ auto เช่น COT003
                 startDate,
                 endDate,
                 json.get("coopEduType"),

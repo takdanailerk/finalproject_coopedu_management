@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class CompanyServiceImpl implements CompanyService{
+public class CompanyServiceImpl implements CompanyService {
 
     @Autowired
     private CompanyDao companyDao;
 
     @Override
     @Transactional
-    public void addCompany(Company company){
+    public void addCompany(Company company) {
         companyDao.addCompany(company);
     }
 
-
 }
+

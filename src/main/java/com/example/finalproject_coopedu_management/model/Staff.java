@@ -16,7 +16,9 @@ import javax.persistence.*;
 public class Staff {
 
     @Id
-    private String staffId;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long staffId;
+
     private String staffName;
     private String staffSurname;
     private String staffPhoneNo;

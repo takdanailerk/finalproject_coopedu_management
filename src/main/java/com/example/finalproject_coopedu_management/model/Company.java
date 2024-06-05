@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "companies")
@@ -18,7 +16,9 @@ import javax.persistence.Table;
 public class Company {
 
     @Id
-    private String companyId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long companyId;
+
     private String companyName;
     private String companyAddress;
     private String companyPhoneNo;
@@ -27,5 +27,8 @@ public class Company {
     private String companyFacebook;
     private String coordinatorName;
     private String coordinatorPhoneNo;
+
+
+
 
 }

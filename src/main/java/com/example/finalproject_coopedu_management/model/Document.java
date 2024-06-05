@@ -17,7 +17,9 @@ import java.util.Date;
 public class Document {
 
     @Id
-    private String docId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long docId;
+
     private String docName;
     private Date uploadDate;
     private String docType;
