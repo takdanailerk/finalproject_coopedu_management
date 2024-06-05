@@ -154,19 +154,17 @@
                     </div>
                     <div class="col-sm-1 control-label">Line :</div>
                     <div class="col-sm-3">
-                        <!--เปลี่ยน type เป็น text-->
                         <input type="text" name="companyLine" required class="form-control" minlength="2" placeholder="Line">
                     </div>
                 </div>
                 <div class="form-group row mb-3">
                     <div class="col-sm-1 control-label">ชื่อผู้ประสานงาน :</div>
                     <div class="col-sm-3">
-                        <input type="email" name="coordinatorName" required class="form-control" minlength="2" placeholder="ชื่อ">
+                        <input type="text" name="coordinatorName" required class="form-control" minlength="2" placeholder="ชื่อ">
                     </div>
                     <div class="col-sm-1 control-label">เบอร์โทร :</div>
                     <div class="col-sm-3">
-                        <!--เปลี่ยน type เป็น text-->
-                        <input type="email" name="coordinatorPhoneNo" required class="form-control" minlength="2" placeholder="เบอรโทร">
+                        <input type="text" name="coordinatorPhoneNo" required class="form-control" minlength="2" placeholder="เบอรโทร">
                     </div>
                 </div>
 
