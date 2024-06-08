@@ -53,8 +53,8 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
                 json.get("coordinatorName"),
                 json.get("coordinatorPhoneNo")
         );
-        companyService.addCompany(company);
-
+        Long companyId = companyService.addCompany(company);
+        Company existCompany = companyService.getCompanyById(companyId);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // รูปแบบวันที่ใน JSON
 
@@ -68,7 +68,8 @@ public class CoopEducationFormServiceImpl implements CoopEducationFormService {
                 json.get("coopEduType"),
 //                json.get("status"),
                 json.get("coopEduYear"),
-                json.get("coopEduSemester")
+                json.get("coopEduSemester"),
+                existCompany
 //                companyId
 //                json.get("majorId")
         );

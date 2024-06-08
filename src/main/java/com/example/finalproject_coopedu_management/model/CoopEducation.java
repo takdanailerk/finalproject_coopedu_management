@@ -31,9 +31,9 @@ public class CoopEducation {
 
 
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "companyId")
-//    private Company company;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "companyId")
+    private Company company;
 //
 //    @ManyToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "majorId")
