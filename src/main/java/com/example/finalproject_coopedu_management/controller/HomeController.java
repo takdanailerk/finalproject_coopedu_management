@@ -1,6 +1,9 @@
 package com.example.finalproject_coopedu_management.controller;
 
+import com.example.finalproject_coopedu_management.service.CompanyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -8,6 +11,9 @@ public class HomeController {
 
 //    @Autowired
 //    private CoopEducationService coopEducationService;
+
+    @Autowired
+    private CompanyService companyService;
 
     @RequestMapping("/")
     public String goToHomePage () {
@@ -21,7 +27,8 @@ public class HomeController {
 
     //AddCoopedu
     @GetMapping("/request-form")
-    public String goToRequestFormPage () {
+    public String goToRequestFormPage (Model model) {
+        model.addAttribute("majors", companyService.getAllCompanies());
         return "request-form";
     }
 

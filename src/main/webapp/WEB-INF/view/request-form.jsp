@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <body>
 <%@include file="home.jsp" %>
@@ -167,6 +169,14 @@
                         <input type="text" name="coordinatorPhoneNo" required class="form-control" minlength="2" placeholder="เบอรโทร">
                     </div>
                 </div>
+                <select>
+                    <c:forEach var="major" items="${majors}">
+                        <option value="${major.companyId}">
+                                ${major.companyName}
+                        </option>
+                    </c:forEach>
+                </select>
+
 
                     <div class="form-group row mb-3">
             <div class="col-sm-5 control-label ">ข้อมูลนักศึกษา.</div>
