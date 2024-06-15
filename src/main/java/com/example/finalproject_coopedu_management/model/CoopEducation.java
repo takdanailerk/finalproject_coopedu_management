@@ -21,23 +21,24 @@ public class CoopEducation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long coopEduId;
 
+    private String coopName;
     private LocalDate startDate;
     private LocalDate endDate;
     private String coopEduType;
-//    private String status;
+    private String status;
     private String coopEduYear;
     private String coopEduSemester;
-
-
 
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "companyId")
     private Company company;
-//
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "majorId")
-//    private Major major;
+
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "majorId")
+    private Major major;
+
 
 
 }

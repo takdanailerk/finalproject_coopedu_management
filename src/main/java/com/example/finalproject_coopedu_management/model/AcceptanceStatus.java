@@ -19,7 +19,7 @@ public class AcceptanceStatus {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long acceptStatId;
 
-    private String status;
+    private String acceptStatus;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "coopEduId")
