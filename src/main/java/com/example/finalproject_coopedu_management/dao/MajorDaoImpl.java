@@ -60,5 +60,12 @@ public class MajorDaoImpl implements MajorDao{
         session.delete(major);
     }
 
+    @Override
+    public Long getLatestMajorId() {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Long> query = session.createQuery("SELECT MAX(m.id) FROM Major m", Long.class);
+        return query.getSingleResult();
+    }
+
 
 }

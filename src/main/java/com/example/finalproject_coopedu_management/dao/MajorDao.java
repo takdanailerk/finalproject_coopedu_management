@@ -14,5 +14,6 @@ public interface MajorDao {
     Major getMajorById (Long majorId);
     void updateMajor(Major major);
     void deleteMajor(Long majorId);
+    Long getLatestMajorId ();
 
 }

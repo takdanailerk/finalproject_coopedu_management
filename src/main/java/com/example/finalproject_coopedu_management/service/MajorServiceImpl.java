@@ -21,9 +21,10 @@ public class MajorServiceImpl implements MajorService{
 
     @Override
     @Transactional
-    public void addMajorForm(@RequestBody Map<String, String> json) {
+    public void addMajorForm(Map<String, String> json) {
+        Long latestMajorId = majorDao.getLatestMajorId() + 1;
         Major major = new Major(
-                2l,
+                latestMajorId,
                 json.get("majorName"),
                 json.get("majorPhoneNo"),
                 json.get("majorFax"),

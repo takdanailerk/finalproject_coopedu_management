@@ -10,7 +10,6 @@ import java.util.Map;
 @Repository
 public interface MajorService {
 
-    @Transactional
     void addMajorForm (Map<String, String> json);
     Long addMajor (Major major);
 //    void addMajor (Major major);
